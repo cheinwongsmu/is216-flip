@@ -134,9 +134,9 @@ Before running the suite, create a testing account through the app's **Sign Up**
 You do **not** need to start `pnpm run dev` yourself — Playwright's config (`playwright.config.js`) starts the dev server automatically if one isn't already running.
 
 ```bash
-pnpm run test:e2e          # run the full suite headlessly
-pnpm run test:e2e:ui       # run interactively in Playwright's UI mode (great for learning)
-pnpm run test:e2e:report   # open the HTML report from the last run
+pnpm playwright test          # run the full suite headlessly
+pnpm playwright test --ui     # run interactively in Playwright's UI mode (great for learning)
+pnpm playwright show-report   # open the HTML report from the last run
 ```
 
 ### What's in the suite
