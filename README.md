@@ -9,7 +9,7 @@ This repository is an **exemplar project** — it's meant to be cloned and set u
 
 | Layer      | Tech                                              |
 |------------|----------------------------------------------------|
-| Frontend   | Vue 3 (`<script setup>`), Vue Router, Pinia, Bootstrap 5, Chart.js |
+| Frontend   | Vue 3 (`<script setup>`), Vue Router, Pinia, Bootstrap 5 |
 | Backend    | Supabase (Postgres database + Auth)               |
 | Build tool | Vite                                               |
 | E2E tests  | Playwright                                         |
@@ -42,8 +42,8 @@ This is a shared demo environment — please don't enter any real personal infor
 ## 1. Clone the repo
 
 ```bash
-git clone https://github.com/cheinwongsmu/flip.git
-cd flip
+git clone https://github.com/cheinwongsmu/is216-flip.git
+cd is216-flip
 pnpm install
 pnpm approve-builds --all
 ```
