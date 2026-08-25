@@ -193,7 +193,7 @@ onUnmounted(() => {
 .page {
   background: #070C18;
   color: #F1F5F9;
-  height: 100dvh;
+  height: 100vh;
   overflow-y: auto;
 }
 
