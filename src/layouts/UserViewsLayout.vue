@@ -53,7 +53,7 @@ async function logout() {
                   <span class="avatar-circle avatar-lg">{{ avatarInitial }}</span>
                   <div>
                     <div>{{ auth.profile.username }}</div>
-                    <div class="small text-muted">{{ auth.profile.email }}</div>
+                    <div class="small text-secondary">{{ auth.profile.email }}</div>
                   </div>
                 </div>
               </li>

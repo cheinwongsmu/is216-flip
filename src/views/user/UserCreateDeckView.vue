@@ -66,7 +66,7 @@ async function saveDeck() {
               </select>
             </div>
             <div class="mb-3">
-              <label class="form-label">Description <span class="text-muted small">(optional)</span></label>
+              <label class="form-label">Description <span class="text-secondary small">(optional)</span></label>
               <textarea v-model="form.description" class="form-control" rows="2"
                 placeholder="A brief description of this deck"></textarea>
             </div>

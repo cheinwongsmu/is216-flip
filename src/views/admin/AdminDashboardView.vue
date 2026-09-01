@@ -67,7 +67,7 @@ onMounted(loadStats)
       <div class="col-12">
         <div class="panel">
           <div>Decks by Subject</div>
-          <div v-if="subjectData.length === 0" class="text-muted mt-3">No decks yet.</div>
+          <div v-if="subjectData.length === 0" class="text-secondary mt-3">No decks yet.</div>
           <div v-else class="subject-list mt-3">
             <div v-for="s in subjectData" :key="s.subject" class="subject-row">
               <div class="small">{{ s.subject }}</div>

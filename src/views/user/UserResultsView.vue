@@ -56,7 +56,7 @@ async function studyAgain() {
       <div v-else class="text-center">
         <div class="fs-1 mb-2">{{ motivationalIcon }}</div>
         <h2 class="mb-1">Session Complete!</h2>
-        <h5 class="text-muted mb-4">{{ deck.title }}</h5>
+        <h5 class="text-secondary mb-4">{{ deck.title }}</h5>
 
         <!-- Score card -->
         <div class="card shadow-sm border-0 mb-4">
@@ -64,15 +64,15 @@ async function studyAgain() {
             <div class="row g-3 mb-4">
               <div class="col-4">
                 <div class="fs-3 text-primary">{{ totalCards }}</div>
-                <div class="text-muted small">Total Cards</div>
+                <div class="text-secondary small">Total Cards</div>
               </div>
               <div class="col-4">
                 <div class="fs-3 text-success">{{ knownCards }}</div>
-                <div class="text-muted small">Got It</div>
+                <div class="text-secondary small">Got It</div>
               </div>
               <div class="col-4">
                 <div class="fs-3 text-danger">{{ unknownCards }}</div>
-                <div class="text-muted small">Still Learning</div>
+                <div class="text-secondary small">Still Learning</div>
               </div>
             </div>
 

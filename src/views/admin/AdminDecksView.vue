@@ -36,7 +36,7 @@ onMounted(loadDecks)
 <template>
   <div>
     <div class="table-panel">
-      <div v-if="loading" class="text-center py-5 text-muted">Loading decks…</div>
+      <div v-if="loading" class="text-center py-5 text-secondary">Loading decks…</div>
       <table v-else class="admin-table">
         <thead>
           <tr>
@@ -54,11 +54,11 @@ onMounted(loadDecks)
               <td>{{ d.title }}</td>
               <td>
                 <div class="text-dark">{{ d.owner_username }}</div>
-                <div class="text-muted small">{{ d.owner_email }}</div>
+                <div class="text-secondary small">{{ d.owner_email }}</div>
               </td>
               <td><span class="subj-chip">{{ d.subject }}</span></td>
-              <td class="text-muted">{{ d.card_count }}</td>
-              <td class="text-muted" style="font-size:0.82rem;">{{ fmtDate(d.created_at) }}</td>
+              <td class="text-secondary">{{ d.card_count }}</td>
+              <td class="text-secondary" style="font-size:0.82rem;">{{ fmtDate(d.created_at) }}</td>
               <td>
                 <div class="d-flex gap-1">
                   <button class="btn btn-xs btn-outline-secondary" @click="toggleExpand(d)">
@@ -71,7 +71,7 @@ onMounted(loadDecks)
             <tr v-if="expandedId === d.id" class="expand-row">
               <td colspan="6">
                 <div class="cards-preview">
-                  <div v-if="!d.cards || d.cards.length === 0" class="text-muted small">No cards in this deck.</div>
+                  <div v-if="!d.cards || d.cards.length === 0" class="text-secondary small">No cards in this deck.</div>
                   <div v-else class="cards-grid">
                     <div v-for="c in d.cards" :key="c.id" class="card-chip">
                       <div class="card-front">{{ c.front }}</div>
@@ -136,8 +136,8 @@ onMounted(loadDecks)
 }
 
 /* Cards preview */
-.cards-preview { 
-  padding: 1.2rem 1.2rem; 
+.cards-preview {
+  padding: 1.2rem 1.2rem;
 }
 
 .cards-grid {
@@ -154,13 +154,13 @@ onMounted(loadDecks)
   padding: 0.6rem 0.6rem;
 }
 
-.card-front { 
-  font-weight: 500; 
-  color: #0f172a; 
-  margin-bottom: 5px; 
-}
-.card-back  { 
-  color: #64748b; 
+.card-front {
+  font-weight: 500;
+  color: #0f172a;
+  margin-bottom: 5px;
 }
 
+.card-back {
+  color: #64748b;
+}
 </style>

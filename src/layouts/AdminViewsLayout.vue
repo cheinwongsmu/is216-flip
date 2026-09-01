@@ -52,7 +52,8 @@ async function logout() {
     <!-- Main -->
     <div class="admin-main">
       <header class="admin-topbar px-3 px-md-4">
-        <button class="sidebar-toggle d-flex d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#adminSidebar" aria-controls="adminSidebar">
+        <button class="sidebar-toggle d-flex d-md-none" type="button" data-bs-toggle="offcanvas"
+          data-bs-target="#adminSidebar" aria-controls="adminSidebar">
           <span></span><span></span><span></span>
         </button>
         <div>{{ pageTitle }}</div>
@@ -60,7 +61,8 @@ async function logout() {
         <!-- Username dropdown -->
         <ul class="navbar-nav ms-auto">
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle d-flex align-items-center gap-2" href="#" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
               <span class="avatar-circle">{{ avatarInitial }}</span>
               <span class="d-none d-sm-inline-block">{{ auth.profile.username }}</span>
             </a>
@@ -70,7 +72,7 @@ async function logout() {
                   <span class="avatar-circle avatar-lg">{{ avatarInitial }}</span>
                   <div>
                     <div class="d-sm-block">{{ auth.profile.username }}</div>
-                    <div class="small text-muted">{{ auth.profile?.email }}</div>
+                    <div class="small text-secondary">{{ auth.profile?.email }}</div>
                   </div>
                 </div>
               </li>

@@ -114,7 +114,7 @@ function resetAndRestart() {
       <div v-if="session.isSessionComplete.value" class="text-center py-4">
         <div class="fs-1 mb-2">✅</div>
         <h4>Session complete!</h4>
-        <p class="text-muted">Redirecting to results…</p>
+        <p class="text-secondary">Redirecting to results…</p>
       </div>
 
       <!-- Card study area -->
@@ -123,7 +123,7 @@ function resetAndRestart() {
           :is-flipped="session.isFlipped.value" @flip="session.flip()" />
 
         <!-- Flip hint -->
-        <p v-if="!session.isFlipped.value && !hasFlippedOnce" class="text-muted small mt-3 mb-0">
+        <p v-if="!session.isFlipped.value && !hasFlippedOnce" class="text-secondary small mt-3 mb-0">
           Click card to reveal answer
         </p>
 
@@ -143,7 +143,7 @@ function resetAndRestart() {
             @click="session.previous()">
             ← Prev
           </button>
-          <span class="text-muted small">{{ session.currentIndex.value + 1 }} / {{ studyCards.length }}</span>
+          <span class="text-secondary small">{{ session.currentIndex.value + 1 }} / {{ studyCards.length }}</span>
           <button class="btn btn-outline-secondary" :disabled="session.currentIndex.value === studyCards.length - 1"
             @click="session.next()">
             Next →
@@ -155,11 +155,11 @@ function resetAndRestart() {
       <div class="d-flex justify-content-center text-center gap-4 mt-5">
         <div>
           <div class="text-success fs-4">{{ session.knownCount.value }}</div>
-          <div class="text-muted small">Got it</div>
+          <div class="text-secondary small">Got it</div>
         </div>
         <div>
           <div class="text-danger fs-4">{{ session.unknownCount.value }}</div>
-          <div class="text-muted small">Still learning</div>
+          <div class="text-secondary small">Still learning</div>
         </div>
       </div>
     </div>
