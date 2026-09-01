@@ -97,13 +97,13 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="page d-flex flex-column">
+  <div class="page container-fluid d-flex flex-column">
     <!-- tsParticles background -->
-    <vue-particles id="tsparticles" :options="particlesConfig" class="particles-bg" />
+    <vue-particles id="tsparticles" :options="particlesConfig" />
 
     <!-- Top bar -->
-    <header class="topbar d-flex justify-content-between align-items-center px-3 py-3">
-      <div class="brand d-flex align-items-center gap-2">
+    <header class="topbar d-flex justify-content-between px-3 py-3">
+      <div class="brand d-flex align-items-center">
         <img src="/logo.gif" alt="FLIP logo" class="brand-logo" />
         <span>FLIP</span>
       </div>
@@ -197,28 +197,21 @@ onUnmounted(() => {
   overflow-y: auto;
 }
 
-/* ── tsParticles layer ── */
-.particles-bg {
-  position: fixed;
-}
-
 /* ── Topbar ── */
 .topbar {
-  height: 60px;
-  position: relative;
   border-bottom: 1px solid #32353d;
   background: #070C18;
 }
 
 .brand {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #F1F5F9;
 }
 
 .brand-logo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 
 .btn-nav {
