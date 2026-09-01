@@ -31,17 +31,18 @@ async function submit() {
 }
 </script>
 
+
 <template>
-  <div class="auth-page d-flex align-items-center justify-content-center">
-    <div class="auth-card card shadow-lg border-0">
-      <div class="card-body p-4 p-md-5">
+  <div class="auth-page container-fluid d-flex align-items-center justify-content-center">
+    <div class="auth-card card shadow border-0">
+      <div class="card-body p-4">
         <!-- Logo -->
-        <div class="text-center mb-4">
-          <router-link to="/landing" class="brand text-decoration-none d-inline-flex align-items-center gap-2">
+        <div class="text-center">
+          <router-link to="/landing" class="brand text-decoration-none d-inline-flex align-items-center">
             <img src="/logo.gif" alt="FLIP logo" class="brand-logo" />
-            <span class="fw-bold fs-4">FLIP</span>
+            <span>FLIP</span>
           </router-link>
-          <h2 class="h4 mt-3 mb-1">Create your account</h2>
+          <h2 class="h4">Create your account</h2>
         </div>
 
         <!-- Error -->
@@ -51,14 +52,12 @@ async function submit() {
         <form @submit.prevent="submit" novalidate>
           <div class="mb-3">
             <label class="form-label">Username</label>
-            <input v-model="form.username" type="text" class="form-control" placeholder="Choose a username"
-              autocomplete="username" />
+            <input v-model="form.username" type="text" class="form-control" placeholder="Choose a username" />
           </div>
 
           <div class="mb-3">
             <label class="form-label">Email</label>
-            <input v-model="form.email" type="email" class="form-control" placeholder="you@example.com"
-              autocomplete="email" />
+            <input v-model="form.email" type="email" class="form-control" placeholder="you@example.com" />
           </div>
 
           <div class="mb-3">
@@ -66,7 +65,7 @@ async function submit() {
             <input v-model="form.password" type="password" class="form-control" placeholder="At least 6 characters" />
           </div>
 
-          <div class="mb-4">
+          <div class="mb-3">
             <label class="form-label">Confirm Password</label>
             <input v-model="form.confirm" type="password" class="form-control" placeholder="Re-enter your password" />
           </div>
@@ -74,9 +73,9 @@ async function submit() {
           <button type="submit" class="btn btn-primary w-100 py-2">Create Account</button>
         </form>
 
-        <hr class="my-4" />
+        <hr />
 
-        <p class="text-center text-muted mb-0">
+        <p class="text-center text-secondary small">
           Already have an account?
           <router-link to="/login">Sign in</router-link>
         </p>
@@ -88,23 +87,21 @@ async function submit() {
 <style scoped>
 .auth-page {
   height: 100vh;
-  background: #f1f5f9;
   padding: 2rem 1rem;
 }
 
 .auth-card {
-  width: 440px;
+  width: 400px;
   border-radius: 20px;
 }
 
 .brand {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #2563EB;
 }
 
 .brand-logo {
-  width: 40px;
-  height: 40px;
+  width: 50px;
+  height: 50px;
 }
 </style>
