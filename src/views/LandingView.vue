@@ -107,7 +107,7 @@ onUnmounted(() => {
         <img src="/logo.gif" alt="FLIP logo" class="brand-logo" />
         <span>FLIP</span>
       </div>
-      <nav class="d-flex align-items-center gap-2">
+      <nav class="d-flex align-items-center">
         <router-link to="/login" class="btn-nav" data-testid="login-link">Log In</router-link>
         <router-link to="/register" class="btn-nav btn-nav-fill">Sign Up</router-link>
       </nav>
@@ -115,10 +115,10 @@ onUnmounted(() => {
 
     <!-- Main split layout -->
     <main class="main-content container-fluid flex-grow-1">
-      <div class="h-100 px-0 row">
+      <div class="h-100 row">
         <!-- LEFT: Hero -->
         <section
-          class="col-12 col-lg-5 d-flex flex-column align-items-center align-items-lg-start justify-content-lg-center text-center text-lg-start px-3 px-sm-4 px-lg-5 py-4 py-lg-3 gap-3">
+          class="col-12 col-lg-5 d-flex flex-column align-items-center align-items-lg-start justify-content-lg-center text-center text-lg-start px-3 px-lg-5 py-5 gap-2">
           <h1 data-testid="header-text" class="hero-title">
             Study smarter,<br />
             <span class="accent">one flip at a time.</span>
@@ -128,13 +128,13 @@ onUnmounted(() => {
             Create flashcard decks, quiz yourself with smooth 3D flips entirely in your browser.
           </p>
 
-          <div class="d-flex gap-3 align-items-center justify-content-center justify-content-lg-start mb-3">
+          <div class="d-flex gap-3 align-items-center justify-content-center justify-content-lg-start">
             <router-link to="/register" class="cta-btn-primary">Sign Up</router-link>
             <router-link to="/login" class="cta-btn-ghost">Log In →</router-link>
           </div>
 
           <!-- Auto-flip demo card -->
-          <div class="demo-scene" @mouseenter="isFlipped = true" @mouseleave="isFlipped = false">
+          <div class="demo-scene mt-4" @mouseenter="isFlipped = true" @mouseleave="isFlipped = false">
             <div class="demo-inner" :class="{ flipped: isFlipped }">
               <div class="demo-face demo-front">
                 <span class="face-label">Question</span>
@@ -217,7 +217,7 @@ onUnmounted(() => {
 .btn-nav {
   color: #e2e8f0;
   text-decoration: none;
-  padding: 0.3rem 0.8rem;
+  padding: 0.5rem 1rem;
   border-radius: 5px;
 }
 
@@ -238,15 +238,14 @@ onUnmounted(() => {
 
 /* ── Main content ── */
 .main-content {
-  position: relative;
+  /* position: relative; */
 }
 
 /* ── Hero section ── */
 .hero-title {
   font-size: 2.5rem;
   font-weight: 800;
-  line-height: 1.5;
-  margin: 0;
+  line-height: 1.2;
   color: #F1F5F9;
 }
 
@@ -255,12 +254,9 @@ onUnmounted(() => {
 }
 
 .hero-sub {
-  font-size: 1.1rem;
   line-height: 1.5;
   color: #d7e6f4;
-  margin-bottom: 1.2em;
-  max-width: 380px;
-  width: 100%;
+  max-width: 400px;
 }
 
 .cta-btn-primary {
@@ -269,18 +265,15 @@ onUnmounted(() => {
   text-decoration: none;
   padding: 0.5rem 1.5rem;
   border-radius: 5px;
-  font-weight: 500;
 }
 
 .cta-btn-primary:hover {
   background: #1D4ED8;
-  color: #fff;
 }
 
 .cta-btn-ghost {
   color: #e2e8f0ba;
   text-decoration: none;
-  font-weight: 500;
 }
 
 .cta-btn-ghost:hover {
@@ -289,13 +282,12 @@ onUnmounted(() => {
 
 /* ── Demo card ── */
 .demo-scene {
-  width: 100%;
-  max-width: 300px;
+  width: 300px;
   height: 120px;
 }
 
 .demo-inner {
-  width: 100%;
+  position: relative;
   height: 100%;
   transform-style: preserve-3d;
   transition: transform 1s;
@@ -310,14 +302,13 @@ onUnmounted(() => {
   inset: 0;
   border-radius: 10px;
   text-align: center;
-  padding: 1.25rem 1.25rem;
+  padding: 1.5rem 1.5rem;
   backface-visibility: hidden;
 }
 
 .demo-front {
   background: #ffffff;
   color: #0f172a;
-  border: 1px solid #e2e8f0;
 }
 
 .demo-back {
