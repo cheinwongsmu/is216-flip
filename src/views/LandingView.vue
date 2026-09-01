@@ -114,7 +114,7 @@ onUnmounted(() => {
     </header>
 
     <!-- Main split layout -->
-    <main class="main-content container-fluid flex-grow-1">
+    <main class="container-fluid flex-grow-1">
       <div class="h-100 row">
         <!-- LEFT: Hero -->
         <section
@@ -234,11 +234,6 @@ onUnmounted(() => {
 
 .btn-nav-fill:hover {
   background: #1D4ED8;
-}
-
-/* ── Main content ── */
-.main-content {
-  /* position: relative; */
 }
 
 /* ── Hero section ── */
