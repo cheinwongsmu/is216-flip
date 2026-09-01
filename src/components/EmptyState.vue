@@ -7,7 +7,7 @@ defineProps({
 
 <template>
   <div class="text-center py-5">
-    <h5 class="text-muted">{{ message }}</h5>
+    <h5 class="text-secondary">{{ message }}</h5>
     <slot />
   </div>
 </template>

@@ -27,8 +27,8 @@ defineEmits(['flip'])
 <style scoped>
 .card-container {
   width: 100%;
-  max-width: 600px;
-  height: 300px;
+  max-width: 500px;
+  height: 250px;
   cursor: pointer;
 }
 
@@ -53,10 +53,9 @@ defineEmits(['flip'])
   border-radius: 15px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 2rem;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   text-align: center;
 }
 
