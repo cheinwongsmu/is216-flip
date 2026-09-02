@@ -47,7 +47,6 @@ defineEmits(['flip'])
 .card-front,
 .card-back {
   position: absolute;
-  top: 100px;
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
