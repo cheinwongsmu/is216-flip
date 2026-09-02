@@ -149,25 +149,26 @@ onUnmounted(() => {
           </div>
         </section>
 
-        <div class="border-top d-lg-none"></div>
-        <!-- RIGHT: Feature showcase -->
+        <div class="border-top border-primary d-lg-none"></div>
 
-        <section class="col-12 col-lg-7 d-flex flex-column position-relative px-3 px-sm-4 px-lg-5 py-4 py-lg-3"
-          @mouseenter="pauseShowcase" @mouseleave="resumeShowcase">
+        <!-- RIGHT: Feature showcase -->
+        <section class="col-12 col-lg-7 d-flex px-3 px-lg-5 py-5" @mouseenter="pauseShowcase"
+          @mouseleave="resumeShowcase">
 
           <!-- Spotlight -->
-          <div class="d-flex flex-column justify-content-lg-center flex-lg-fill">
+          <div class="d-flex flex-column justify-content-lg-center">
             <Transition mode="out-in">
-              <div :key="activeIndex" class="d-flex flex-column gap-3 w-100">
-                <div class="glow-icon-wrap">
+              <div :key="activeIndex" class="d-flex flex-column gap-3">
+                <div class="glow-icon-wrap d-flex align-items-center justify-content-center">
                   <div class="glow-ring"></div>
-                  <div class="glow-icon">{{ features[activeIndex].icon }}</div>
+                  <div class="glow-icon d-flex align-items-center justify-content-center">{{ features[activeIndex].icon
+                  }}</div>
                 </div>
-                <h3 class="spotlight-title">{{ features[activeIndex].title }}</h3>
-                <p class="spotlight-desc">{{ features[activeIndex].description }}</p>
+                <h3>{{ features[activeIndex].title }}</h3>
+                <p>{{ features[activeIndex].description }}</p>
                 <ul class="bullet-card d-flex flex-column gap-2">
-                  <li v-for="b in features[activeIndex].bullets" :key="b" class="d-flex align-items-center gap-2">
-                    <span>✓</span>{{ b }}
+                  <li v-for="b in features[activeIndex].bullets" :key="b">
+                    <span class="me-3">✓</span>{{ b }}
                   </li>
                 </ul>
               </div>
@@ -183,7 +184,7 @@ onUnmounted(() => {
     </main>
 
     <!-- Mobile-only footer -->
-    <footer class="mobile-footer d-lg-none text-center">
+    <footer class="mobile-footer text-center">
       FLIP — Flashcard Learning Interactive Platform · Built with Vue 3
     </footer>
   </div>
@@ -329,16 +330,13 @@ onUnmounted(() => {
 /* Glowing icon */
 .glow-icon-wrap {
   position: relative;
-  width: 68px;
-  height: 68px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 70px;
+  height: 70px;
 }
 
 .glow-ring {
   position: absolute;
-  inset: -3px;
+  inset: -5px;
   border-radius: 50%;
   border: 1.5px solid #1383f4;
   animation: ringPulse 2.8s ease-in-out infinite;
@@ -364,20 +362,7 @@ onUnmounted(() => {
   border-radius: 50%;
   background: #1384f43a;
   border: 1px solid #1383f4;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-.spotlight-title {
-  font-weight: 500;
-  margin: 0;
-  color: #F1F5F9;
-}
-
-.spotlight-desc {
-  color: #e3ecf998;
+  font-size: 2rem;
 }
 
 /* Bullet card — clean glass style, no loud borders */
@@ -393,6 +378,7 @@ onUnmounted(() => {
 .bullet-card li {
   font-size: 0.8rem;
   color: #e5eefba8;
+  list-style: none;
 }
 
 /* ── Timer bar ── */
@@ -425,7 +411,7 @@ onUnmounted(() => {
 
 /* ── Mobile footer ── */
 .mobile-footer {
-  padding: 1.25rem;
+  padding: 1rem;
   font-size: 0.5rem;
   color: #f7f9fc4b;
 }
