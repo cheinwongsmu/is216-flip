@@ -25,16 +25,16 @@ async function logout() {
 </script>
 
 <template>
-  <div class="admin-shell">
+  <div class="admin-shell d-flex">
     <!-- Sidebar -->
-    <aside id="adminSidebar" class="admin-sidebar offcanvas-start offcanvas-md" tabindex="-1">
-      <div class="sidebar-panel">
-        <div class="sidebar-brand">
+    <aside id="adminSidebar" class="admin-sidebar d-flex offcanvas-md offcanvas-start" tabindex="-1">
+      <div class="sidebar-panel d-flex flex-column flex-fill">
+        <div class="sidebar-brand d-flex align-items-center gap-3 p-3 border-bottom border-secondary-subtle">
           <img src="/logo.gif" alt="FLIP" class="sidebar-logo" />
           <span>FLIP Admin</span>
         </div>
 
-        <nav class="sidebar-nav">
+        <nav class="sidebar-nav d-flex flex-column gap-1 flex-fill p-3">
           <router-link to="/admin" exact-active-class="active">
             <span>📊</span> Dashboard
           </router-link>
@@ -43,7 +43,7 @@ async function logout() {
           </router-link>
         </nav>
 
-        <div class="sidebar-footer">
+        <div class="p-3 border-top border-secondary-subtle">
           <router-link to="/" class="btn-back">← Back to App</router-link>
         </div>
       </div>
@@ -98,44 +98,24 @@ async function logout() {
 <style scoped>
 .admin-shell {
   background: #f1f5f9;
-  display: flex;
   min-height: 100vh;
 }
 
 .admin-sidebar {
   width: 250px;
-  flex: 0 0 250px;
-  display: flex;
-  flex-direction: column;
 }
 
 .sidebar-panel {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
   background-color: #0f172a;
 }
 
 .sidebar-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 1.5rem 1.5rem 1rem;
   color: #fff;
-  border-bottom: 1px solid #faf5f522;
 }
 
 .sidebar-logo {
   width: 30px;
   height: 30px;
-}
-
-.sidebar-nav {
-  flex: 1;
-  padding: 1rem 0.75rem;
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
 }
 
 .sidebar-nav a {
@@ -153,11 +133,6 @@ async function logout() {
 .sidebar-nav a.active {
   background: #2563EB;
   color: #fff;
-}
-
-.sidebar-footer {
-  padding: 1rem 1.25rem;
-  border-top: 1px solid #d2dcf82d;
 }
 
 .btn-back {
